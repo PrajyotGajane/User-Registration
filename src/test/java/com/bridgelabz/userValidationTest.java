@@ -163,4 +163,28 @@ public class userValidationTest {
         boolean result = UserValidator.userDataValidation("Prajyot1196",UserValidator.passwordRule3);
         Assert.assertFalse(result);
     }
+    //Test case for validating password exactly one special characters
+    @Test
+    public void givenPassowrdWithExactOneSpecialCharacter_WhenProper_ShouldReturnTrue() {
+        boolean result = UserValidator.userDataValidation("Prajyot@96",UserValidator.passwordRule4);
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassowrdWithExactOneSpecialCharacter_WhenSpecialCharactersNotPresent_ShouldReturnFalse() {
+        boolean result = UserValidator.userDataValidation("Prajyot123",UserValidator.passwordRule4);
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenPassowrdWithExactOneSpecialCharacter_WhenAllLowerCase_ShouldReturnFalse() {
+        boolean result = UserValidator.userDataValidation("prajyot#123",UserValidator.passwordRule4);
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenPassowrdWithExactOneSpecialCharacter_WhenNumberNotPresent_ShouldReturnFalse() {
+        boolean result = UserValidator.userDataValidation("Prajyot#gajane",UserValidator.passwordRule4);
+        Assert.assertFalse(result);
+    }
 }

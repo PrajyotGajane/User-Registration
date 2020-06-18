@@ -6,6 +6,7 @@ public class UserValidator {
     public static final String passwordRule1 = "^[A-Za-z]{8,}$";
     public static final String passwordRule2 = "^(?=.*[A-Z])[A-Za-z]{8,}$";
     public static final String passwordRule3 = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$";
+    public static final String passwordRule4 = "^(?=.?[A-Z])(?=[^@|#|$|%|&]*[@|#|$|%|&][^@|#|$|%|&]*$)(?=.*[0-9])[A-Za-z0-9@#$%&]{8,}$";
     public static boolean userDataValidation(String dataFromTest,String pattern){
         return dataFromTest.matches(pattern);
     }
