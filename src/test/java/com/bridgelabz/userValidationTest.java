@@ -52,16 +52,25 @@ public class userValidationTest {
         boolean result = UserValidator.userDataValidation("ga",UserValidator.namePattern);
         Assert.assertFalse(result);
     }
-
     @Test
     public void givenLastName_whenAllUpperCase_ShouldReturnFalse() {
         boolean result = UserValidator.userDataValidation("GAJANE",UserValidator.namePattern);
         Assert.assertFalse(result);
     }
-
     @Test
     public void givenLastName_whenDigitsEntered_ShouldReturnFalse() {
         boolean result = UserValidator.userDataValidation("1234",UserValidator.namePattern);
+        Assert.assertFalse(result);
+    }
+    //Test case for validating email address
+    @Test
+    public void givenEmailId_WhenProper_ShouldReturnTrue() {
+        boolean result = UserValidator.userDataValidation("abc@gmail.com", UserValidator.emailPattern);
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenEmailId_WhenNotProper_ShouldReturnFalse() {
+        boolean result = UserValidator.userDataValidation("abc.@gmail.com", UserValidator.emailPattern);
         Assert.assertFalse(result);
     }
 }
