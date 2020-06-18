@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.userValidationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-18T19:50:34" hostname="Home" time="0.019">
-  <properties/>
-  <testcase name="givenPassowrdWithExactOneSpecialCharacter_WhenNumberNotPresent_ShouldReturnFalse" classname="com.bridgelabz.userValidationTest" time="0.019"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
